@@ -85,9 +85,37 @@
 <div class="container">
 <h1 class="h1">Forensic Exemplars</h1>
 <div class="content">
-<!---------------------Auto Score Box------------------->
+
 <?php
+/////////////////check for the dump folders////////////////
+
+$dir1 = '/home/project2/exemplar';
+
+if (!file_exists($dir1)) {
+ 	mkdir ( $dir1, 0777, true);
+	}
+
+$dir2 = '/home/project2/suspect';
+
+if (!file_exists($dir2)) {
+ 	mkdir ( $dir2, 0777, true);
+	}
+
+$dir3 = '/var/www/html/sam_project2/results';
+
+if (!file_exists($dir3)) {
+ 	mkdir ( $dir3, 0777, true);
+	}
+
+//////////////////////Auto Score Box////////////////////
+
+
 $myFile = "/home/project2/output";
+
+if (!file_exists($myFile)) {
+ 	fopen ( $myFile, w);
+	}
+
 $fh = fopen($myFile, 'r');
 $lines = array();
 while (!feof($fh)) {
