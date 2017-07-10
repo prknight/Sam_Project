@@ -1,4 +1,4 @@
-# Sam_Project
+# Sam_Project (built on Kali)
 Deriving a similarity score between two data flows in this project requires a three step process. First, the relevant parts of the flow are converted to text, where they can receive the necessary sorting and counting. Log files already in text form do not require this conversion. Second, irrelevant information present in a single line is removed from .pcap files by tcpdump. The final step includes the sorting, counting, and comparison of the values in the two groups. A collection of known origin is referred to as an exemplar. A collection of unknown origin is referred to as a suspect.
 
 The GUI version requires two files index.php & combo.sh. It also requires a webserver (apache2) and PHP be installed. The php.ini requires modification to max_upload < 500MB. 
